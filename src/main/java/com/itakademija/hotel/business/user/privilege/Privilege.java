@@ -4,9 +4,13 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.StringJoiner;
 
 @Entity
 @Table(name = "privilege")
+@NamedQueries({
+        @NamedQuery(name = "Privilege.findAll", query = "SELECT p FROM Privilege p")
+})
 public class Privilege implements Serializable {
 
     @Id
@@ -46,5 +50,13 @@ public class Privilege implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, name);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Privilege.class.getSimpleName() + "[", "]")
+                .add("id=" + id)
+                .add("name='" + name + "'")
+                .toString();
     }
 }

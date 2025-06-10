@@ -76,6 +76,12 @@ public class Controller {
         return loginView.getPasswordFromInput();
     }
 
+    public void clearOnLogout(){
+        adminView = null;
+        employeeView = null;
+        loggedUser = null;
+    }
+
 
     public void setMessageToMessageLabel(String message) {
         if (loginView == null) return;

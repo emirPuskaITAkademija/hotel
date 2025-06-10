@@ -7,6 +7,7 @@ module hotel {
     requires java.sql.rowset;
     requires org.controlsfx.controls;
     requires static org.hibernate.orm.core;
+    requires java.desktop;
 
 
     opens com.itakademija.hotel to javafx.base, javafx.fxml;

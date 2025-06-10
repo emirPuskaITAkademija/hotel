@@ -1,14 +1,10 @@
 package com.itakademija.hotel;
 
-import com.itakademija.hotel.business.user.User;
-import com.itakademija.hotel.business.user.UserDao;
 import com.itakademija.hotel.controller.Controller;
 import com.itakademija.hotel.gui.login.LoginView;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
-import java.util.List;
 
 /**
  * JavaFX GUI
@@ -18,18 +14,18 @@ import java.util.List;
  * <p>
  * JavaFX i Android APP dev su jako slični.
  * <p>
- *
- *     Napraviti ekrane.
- *     Ekrani koje prepoznajemo:
- *     <li>1. LoginScreen </li>
- *     <li>2. AdminScreen </li>
- *     <li>3. EmployeeScreen </li>
+ * <p>
+ * Napraviti ekrane.
+ * Ekrani koje prepoznajemo:
+ * <li>1. LoginScreen </li>
+ * <li>2. AdminScreen </li>
+ * <li>3. EmployeeScreen </li>
  * </p>
  * </p>
  */
 public class HotelManagementApplication extends Application {
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         Controller controller = Controller.instance();
         controller.setStage(stage);
 
